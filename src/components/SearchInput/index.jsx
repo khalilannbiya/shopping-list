@@ -1,10 +1,11 @@
+import styles from "./SearchInput.module.css";
 import PropType from "prop-types";
 
 const SearchInput = ({ onSubmit, value, onChange }) => {
    return (
-      <form action="" className="form" onSubmit={onSubmit}>
-         <input onChange={onChange} value={value} type="text" className="input" placeholder="List" />
-         <button className="add-button" type="submit">
+      <form action="" className={styles.form} onSubmit={onSubmit}>
+         <input onChange={onChange} value={value} type="text" className={styles.input} placeholder="List" />
+         <button className={styles.addButton} type="submit">
             Add
          </button>
       </form>
