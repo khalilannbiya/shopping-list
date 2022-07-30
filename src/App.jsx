@@ -6,6 +6,7 @@ import minusIcon from "./assets/minus-icon.svg";
 import shoppingIcon from "./assets/shopping-icon.svg";
 import Navbar from "./components/Navbar";
 import Container from "./components/Container";
+import SearchInput from "./components/SearchInput";
 function App() {
    const [value, setValue] = useState("");
    const [todos, setTodos] = useState([
@@ -63,21 +64,7 @@ function App() {
       <>
          <Navbar icon={shoppingIcon} />
          <Container>
-            <form action="" className="form" onSubmit={handleSubmit}>
-               <input
-                  onChange={(e) => {
-                     setValue(e.target.value);
-                  }}
-                  value={value}
-                  type="text"
-                  className="input"
-                  placeholder="List"
-               />
-               <button className="add-button" type="submit">
-                  Add
-               </button>
-            </form>
-
+            <SearchInput onSubmit={handleSubmit} value={value} onChange={(e) => setValue(e.target.value)} />
             <div className="info">
                <div className="info-total">
                   <p>{`Total List: ${todos.length}`}</p>
