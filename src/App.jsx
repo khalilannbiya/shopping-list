@@ -7,6 +7,7 @@ import shoppingIcon from "./assets/shopping-icon.svg";
 import Navbar from "./components/Navbar";
 import Container from "./components/Container";
 import SearchInput from "./components/SearchInput";
+import Info from "./components/Info";
 function App() {
    const [value, setValue] = useState("");
    const [todos, setTodos] = useState([
@@ -65,18 +66,7 @@ function App() {
          <Navbar icon={shoppingIcon} />
          <Container>
             <SearchInput onSubmit={handleSubmit} value={value} onChange={(e) => setValue(e.target.value)} />
-            <div className="info">
-               <div className="info-total">
-                  <p>{`Total List: ${todos.length}`}</p>
-               </div>
-               <div className="info-total">
-                  <p>{`Total Counts: ${getTotalCounts()}`}</p>
-               </div>
-
-               <button onClick={() => setTodos([])} className="delete-all-button">
-                  Delete all list
-               </button>
-            </div>
+            <Info todosLength={todos.length} totalCounts={getTotalCounts()} onDelete={() => setTodos([])} />
 
             {todos.length > 0 ? (
                <div className="todos">
