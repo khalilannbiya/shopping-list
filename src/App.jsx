@@ -1,11 +1,8 @@
 import { useState } from "react";
 import classNames from "classnames";
 import shoppingIcon from "./assets/shopping-icon.svg";
-import Navbar from "./components/Navbar";
-import Container from "./components/Container";
-import SearchInput from "./components/SearchInput";
-import Info from "./components/Info";
-import Todos from "./components/Todos";
+import { Navbar, Container, SearchInput, Info, Todos, Empty } from "./components";
+
 function App() {
    const [value, setValue] = useState("");
    const [todos, setTodos] = useState([
@@ -66,7 +63,7 @@ function App() {
             <SearchInput onSubmit={handleSubmit} value={value} onChange={(e) => setValue(e.target.value)} />
             <Info todosLength={todos.length} totalCounts={getTotalCounts()} onDelete={() => setTodos([])} />
 
-            {todos.length > 0 ? <Todos todos={todos} onSubstraction={(index) => handleSubstractionCount(index)} onAddition={(index) => handleAdditionCount(index)} /> : <div>Kosong</div>}
+            {todos.length > 0 ? <Todos todos={todos} onSubstraction={(index) => handleSubstractionCount(index)} onAddition={(index) => handleAdditionCount(index)} /> : <Empty />}
          </Container>
       </>
    );
