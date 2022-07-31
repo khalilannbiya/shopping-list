@@ -18,7 +18,7 @@
   font-weight: 600;
 }
 
-.todo-count {
+.todoCount {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@
   box-shadow: var(--main-box-shadow-inset);
 }
 
-.todo-icon-wrapper {
+.todoIconWrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,7 +38,7 @@
   width: 120px;
 }
 
-.todo-action-button {
+.todoActionButton {
   border: none;
   background-color: unset;
   padding: unset;
@@ -46,6 +46,6 @@
   width: 24px;
 }
 
-.todo-divider {
+.todoDivider {
   border-bottom: 1px solid var(--main-border-color);
 }
