@@ -19,7 +19,7 @@ const Info = ({ todosLength, totalCounts, onDelete }) => {
 
 Info.propTypes = {
    todosLength: PropTypes.number,
-   totalCounts: PropTypes.func,
+   totalCounts: PropTypes.number,
    onDelete: PropTypes.func,
 };
 
