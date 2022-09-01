@@ -3,7 +3,7 @@
 Create a shopping list project to learn react JS
 ## Demo
 
-[Demo](https://khalilannbiya.github.io/personal-notes/)
+[Demo](https://khalilannbiya.github.io/shopping-list/)
 
 
 ## Tech Stack
@@ -23,7 +23,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd personal-notes
+  cd shopping-list
 ```
 
 Install Package with yarn
@@ -35,7 +35,7 @@ Install Package with yarn
 Run local serve
 
 ```bash
-  yarn dev
+  yarn start
 ```
 ## Documentation
 
@@ -46,11 +46,11 @@ Run local serve
 
 ## Features
 
-- Add Note
-- Delete Note
-- Archive Note
-- Search Note
-- You can know the word limit in entering the title
+- Add item 
+- Add count of item
+- Delete Item
+- Delete all item list
+- Can see total list and total counts
 
 
 ## Feedback
